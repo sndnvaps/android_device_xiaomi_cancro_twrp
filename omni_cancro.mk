@@ -10,12 +10,10 @@ TARGET_BOOTANIMATION_NAME := 1080
 # Inherit some common omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := cancro
-PRODUCT_NAME := cm_cancro
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := cancro
-PRODUCT_MANUFACTURER := Xiaomi
+
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -24,3 +22,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=Xiaomi/cancro/cancro:4.4.4/KTU84P/5.1.23:user/release-keys \
     PRIVATE_BUILD_DESC="cm_cancro-userdebug 4.4.4 KTU84Q 5.1.23 release-keys"
 
+## Device identifier. This must come after all inclusions
+
+PRODUCT_NAME := omni_cancro
+PRODUCT_DEVICE := cancro
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Omni on cancro
+PRODUCT_MANUFACTURER := Xiaomi

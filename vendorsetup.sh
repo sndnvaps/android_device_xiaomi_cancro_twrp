@@ -15,3 +15,5 @@
 #
 
 add_lunch_combo cm_cancro-userdebug
+add_lunch_combo aosp_cancro-userdebug
+add_lunch_combo omni_cancro-userdebug

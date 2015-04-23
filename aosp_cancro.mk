@@ -11,11 +11,15 @@ TARGET_BOOTANIMATION_NAME := 1080
 $(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
+
+PRODUCT_NAME := aosp_cancro
 PRODUCT_DEVICE := cancro
-PRODUCT_NAME := cm_cancro
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := cancro
+PRODUCT_MODEL := Aosp on cancro
 PRODUCT_MANUFACTURER := Xiaomi
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
