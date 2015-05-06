@@ -8,7 +8,7 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOTANIMATION_NAME := 1080
 
 # Inherit some common omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/cm/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cancro
